@@ -15,6 +15,8 @@ Fastmin-sg software distributed under MIT licence
 
 The file LICENSE.minimap.txt contains a copy of the minimap2 license.
 
-     
+# Citation
+
+Alex Di Genova, Gonzalo A Ruz, Marie-France Sagot, Alejandro Maass; Fast-SG: an alignment-free algorithm for hybrid assembly, GigaScience, Volume 7, Issue 5, 1 May 2018, giy048, [link](https://doi.org/10.1093/gigascience/giy048)    
 
 
