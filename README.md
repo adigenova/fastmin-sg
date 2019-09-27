@@ -7,7 +7,7 @@ FastMIN-SG is a [Wengan](https://github.com/adigenova/wengan) component.
 
 c compiler; compilation was tested with gcc version GCC/7.3.0-2.30 (Linux) and clang-1000.11.45.5 (Mac OSX).
 
-## License
+# License
 
 Fastmin-sg software distributed under MIT licence
 
