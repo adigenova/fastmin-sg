@@ -1,3 +1,6 @@
+[![GitHub Downloads](https://img.shields.io/github/downloads/adigenova/fastmin-sg/total.svg?style=social&logo=github&label=Download)](https://github.com/adigenova/fastmin-sg/releases)
+
+
 # FastMIN-SG
 [FAST-SG](https://github.com/adigenova/fast-sg) idea implemented using minimizer and chaining with the [minimap2](https://github.com/lh3/minimap2) API.
 FastMIN-SG is a [Wengan](https://github.com/adigenova/wengan) component.
