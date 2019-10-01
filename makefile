@@ -1,12 +1,12 @@
 #CFLAGS=		-g -Wall -O2 -Wc++-compat #-Wextra
 CFLAGS=		-g -Wall -O3  #-Wextra
 CPPFLAGS=	-DHAVE_KALLOC
-INCLUDES=
+INCLUDES= -I ./minimap2
 OBJS=		kthread.o kalloc.o misc.o bseq.o sketch.o sdust.o options.o index.o chain.o align.o hit.o map.o format.o pe.o esterr.o splitidx.o ksw2_ll_sse.o
 PROG=		fastmin-sg
 #PROG_EXTRA=	fastmin-sg
 LIBS=		-lm -lz -lpthread
-VPATH = ./src
+VPATH = ./minimap2 
 
 ifeq ($(arm_neon),) # if arm_neon is not defined
 ifeq ($(sse2only),) # if sse2only is not defined
