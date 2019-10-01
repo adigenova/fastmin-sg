@@ -16,7 +16,7 @@ Fastmin-sg software distributed under MIT licence
 
 ### Minimap2
 
-The file LICENSE.minimap.txt contains a copy of the minimap2 license.
+The file LICENSE.minimap2.txt contains a copy of the minimap2 license.
 
 # Citation
 
