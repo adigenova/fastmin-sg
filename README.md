@@ -1,3 +1,4 @@
+[![HitCount](http://hits.dwyl.io/adigenova/fastmin-sg.svg)](http://hits.dwyl.io/adigenova/fastmin-sg)
 [![GitHub Downloads](https://img.shields.io/github/downloads/adigenova/fastmin-sg/total.svg?style=social&logo=github&label=Download)](https://github.com/adigenova/fastmin-sg/releases)
 
 
