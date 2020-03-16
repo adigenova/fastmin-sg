@@ -1048,6 +1048,7 @@ static int usage() {
     fprintf(stderr, "    -c INT       Minimum aligment coverage[65]\n");
     fprintf(stderr, "    -s INT       Pair rescue in short-read alignment [1=true,0=false]\n");
     fprintf(stderr, "    -r INT       Number of read loaded to memory for mapping [long=1000,short=100000]\n");
+    fprintf(stderr, "    -n INT       Start long-read counter [def=0]\n");
     fprintf(stderr, "  Other options:\n");
     fprintf(stderr, "    -t INT       Number of thread[1]\n");
     fprintf(stderr, "    -p STR       Ouput prefix [FM]\n");
@@ -1142,7 +1143,7 @@ int main(int argc, char *argv[])
   int c=0;
   extern char *optarg;
   extern int optind, optopt;
-  while ((c = getopt (argc-1, argv+1, "Hk:w:I:l:q:m:c:r:t:p:s:")) != -1) {
+  while ((c = getopt (argc-1, argv+1, "Hk:w:I:l:q:m:c:r:t:p:s:n:")) != -1) {
       //fprintf(stderr,"%c=%s\n",c,optarg);
   		switch (c) {
   			case 'H': iopt.flag |= MM_I_HPC; break;
@@ -1157,6 +1158,7 @@ int main(int argc, char *argv[])
             case 's': alnp->pair_rescue = atoi(optarg); break;
             case 'r': alnp->numseq2read = atoi(optarg); break;
             case 't': alnp->n_threads = atoi(optarg); break;
+            case 'n': total_long_reads = (int64_t)(atoi(optarg)); break;
             case 'p': memset(prefix, '\0', sizeof(prefix)); strcpy(prefix, optarg); break;
             case '?':
                     fprintf(stderr, "[%s] unrecognized variable '%c'. Abort!\n",argv[1],optopt);
