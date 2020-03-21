@@ -391,8 +391,13 @@ void* maplongreads(void *arg)
       //the header is not null
       nh=headhits[f];
       while(nh != NULL){
-           fprintf(outFiles[f],"%lld_FG_%d_%d\t%d\t%s\t%d\t%d\t%dM\t*\t%d\t%d\t%s\t%d\n",
-                   (long long)nh->lrid,inserts[f],nh->plr,nh->orientation,nh->ctgid,nh->pos,nh->mapq,kmer_size,nh->mlen,nh->blen,nh->k_seq,nh->qcov);
+           //fprintf(outFiles[f],"%lld_FG_%d_%d\t%d\t%s\t%d\t%d\t%dM\t*\t%d\t%d\t%s\t%d\n",
+             //      (long long)nh->lrid,inserts[f],nh->plr,nh->orientation,nh->ctgid,nh->pos,nh->mapq,kmer_size,nh->mlen,nh->blen,nh->k_seq,nh->qcov);
+                     //read_id,orientation,ctg_id,pos,mapq,ksize,qcov     	
+                    //fprintf(outshort,"%lld\t%d\t%s\t%d\t%d\t%d\t%d\n",
+                     //       (long long)nh->lrid,nh->orientation,nh->ctgid,nh->pos,nh->mapq,kmer_size,nh->qcov);
+           fprintf(outFiles[f],"%lld_FG_%d_%d\t%d\t%s\t%d\t%d\t%d\t%d\n",
+                   (long long)nh->lrid,inserts[f],nh->plr,nh->orientation,nh->ctgid,nh->pos,nh->mapq,kmer_size,nh->qcov);
           headhits[f]=headhits[f]->next;
           //we free the allocated hits
           //free(nh->lrid);
@@ -764,8 +769,11 @@ void* mapshortreads(void *arg) {
                 while(nh != NULL){
                     //fprintf(outshort,"%lld/%d\t%d\t%s\t%d\t%d\t%dM\t*\t%d\t%d\t%s\t%d\n",
                     //        nh->lrid,nh->plr,nh->orientation,nh->ctgid,nh->pos,nh->mapq,kmer_size,nh->mlen,nh->blen,nh->k_seq,nh->qcov);
-                    fprintf(outshort,"%lld\t%d\t%s\t%d\t%d\t%dM\t*\t%d\t%d\t%s\t%d\n",
-                            (long long)nh->lrid,nh->orientation,nh->ctgid,nh->pos,nh->mapq,kmer_size,nh->mlen,nh->blen,nh->k_seq,nh->qcov);
+                    //fprintf(outshort,"%lld\t%d\t%s\t%d\t%d\t%dM\t*\t%d\t%d\t%s\t%d\n",
+                     //       (long long)nh->lrid,nh->orientation,nh->ctgid,nh->pos,nh->mapq,kmer_size,nh->mlen,nh->blen,nh->k_seq,nh->qcov);
+                     //read_id,orientation,ctg_id,pos,mapq,ksize,qcov     	
+                    fprintf(outshort,"%lld\t%d\t%s\t%d\t%d\t%d\t%d\n",
+                            (long long)nh->lrid,nh->orientation,nh->ctgid,nh->pos,nh->mapq,kmer_size,nh->qcov);
                     headhits[f]=headhits[f]->next;
                     //we free the allocated hits
                     //free(nh->lrid);
