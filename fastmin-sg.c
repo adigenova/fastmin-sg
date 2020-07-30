@@ -1097,8 +1097,9 @@ int main(int argc, char *argv[])
 
     mm_verbose = 3; // disable message output to stderr
 	mm_set_opt(0, &iopt, &mopt);
-    //we set the size of the batch 4Gb
-    iopt.mini_batch_size = 4000000000ULL;
+    //we set the size of the batch 40Gb
+    //iopt.mini_batch_size = 4000000000ULL;
+    iopt.batch_size = 40000000000ULL;
 
   if (argc < 4) return usage();
   if (strcmp(argv[1], "ontraw") == 0){
